@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f2ee"/><stop offset="1" stop-color="#e9e5dd"/></linearGradient></defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <rect y="470" width="800" height="130" fill="#e9e5dd" opacity=".7"/>
+  <ellipse cx="400" cy="490" rx="230" ry="18" fill="#000" opacity=".08"/>
+  <g transform="translate(0 0) translate(400 300) scale(1) translate(-400 -300)"><path d="M270 200 Q400 150 530 200 L560 360 Q400 390 240 360 Z" fill="#a9854b"/>
+        <rect x="240" y="330" width="320" height="90" rx="36" fill="#c8a46a"/>
+        <path d="M280 420 L250 490" stroke="#2b2b2e" stroke-width="12" stroke-linecap="round"/><path d="M520 420 L550 490" stroke="#2b2b2e" stroke-width="12" stroke-linecap="round"/>
+        <path d="M330 420 L320 480" stroke="#2b2b2e" stroke-width="10" stroke-linecap="round" opacity=".6"/></g>
+  
+  <text x="32" y="48" font-family="Helvetica,Arial" font-size="15" letter-spacing="3" fill="#8a8580">DEMO IMAGE · RII FURNITURE HUB</text>
+  <text x="32" y="566" font-family="Helvetica,Arial" font-size="20" font-weight="600" fill="#3a3733">Kursi Rotan Bali</text>
+  <text x="768" y="566" font-family="Helvetica,Arial" font-size="15" text-anchor="end" fill="#8a8580">LNG-002</text>
+</svg>

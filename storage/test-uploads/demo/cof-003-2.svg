@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef0f1"/><stop offset="1" stop-color="#dfe3e6"/></linearGradient></defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <rect y="470" width="800" height="130" fill="#dfe3e6" opacity=".7"/>
+  <ellipse cx="400" cy="490" rx="230" ry="18" fill="#000" opacity=".08"/>
+  <g transform="translate(-70 -50) translate(400 300) scale(1.18) translate(-400 -300)"><ellipse cx="400" cy="330" rx="220" ry="54" fill="#232326"/><ellipse cx="400" cy="322" rx="220" ry="50" fill="#37373a"/>
+        <rect x="300" y="350" width="16" height="110" fill="#232326"/><rect x="484" y="350" width="16" height="110" fill="#232326"/><rect x="392" y="360" width="16" height="110" fill="#232326" opacity=".6"/></g>
+  
+  <text x="32" y="48" font-family="Helvetica,Arial" font-size="15" letter-spacing="3" fill="#8a8580">DEMO IMAGE · RII FURNITURE HUB</text>
+  <text x="32" y="566" font-family="Helvetica,Arial" font-size="20" font-weight="600" fill="#3a3733">Meja Samping Pedestal</text>
+  <text x="768" y="566" font-family="Helvetica,Arial" font-size="15" text-anchor="end" fill="#8a8580">COF-003</text>
+</svg>

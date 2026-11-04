@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" width="240" height="64">
+  <rect x="0" y="8" width="48" height="48" rx="12" fill="#1f1f23"/><path d="M14 44 V20 h11 a7 7 0 0 1 0 14 h-11 M25 34 l9 10" stroke="#e6cf9f" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="41" font-family="Helvetica,Arial" font-size="24" font-weight="700" fill="#1f1f23">RII</text>
+  <text x="104" y="41" font-family="Helvetica,Arial" font-size="18" fill="#6b6b73">Furniture</text>
+</svg>

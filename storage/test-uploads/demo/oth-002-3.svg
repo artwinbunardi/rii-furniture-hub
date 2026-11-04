@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6efe8"/><stop offset="1" stop-color="#ebdccd"/></linearGradient></defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <rect y="470" width="800" height="130" fill="#ebdccd" opacity=".7"/>
+  <ellipse cx="400" cy="490" rx="230" ry="18" fill="#000" opacity=".08"/>
+  <g transform="translate(40 25) translate(400 300) scale(0.9) translate(-400 -300)"><rect x="220" y="290" width="360" height="120" rx="40" fill="#c9a77c"/><rect x="220" y="270" width="360" height="40" rx="20" fill="#ddbb90"/>
+        <rect x="250" y="410" width="14" height="70" fill="#2b2b2e"/><rect x="536" y="410" width="14" height="70" fill="#2b2b2e"/></g>
+  <g opacity=".9"><rect x="560" y="40" width="200" height="130" rx="12" fill="#fff"/><rect x="575" y="55" width="80" height="100" rx="8" fill="#c9a77c"/><rect x="665" y="55" width="80" height="100" rx="8" fill="#c9a77c"/><text x="660" y="190" font-family="Helvetica,Arial" font-size="13" text-anchor="middle" fill="#555">Natural</text></g>
+  <text x="32" y="48" font-family="Helvetica,Arial" font-size="15" letter-spacing="3" fill="#8a8580">DEMO IMAGE · RII FURNITURE HUB</text>
+  <text x="32" y="566" font-family="Helvetica,Arial" font-size="20" font-weight="600" fill="#3a3733">Bangku Panjang Kayu</text>
+  <text x="768" y="566" font-family="Helvetica,Arial" font-size="15" text-anchor="end" fill="#8a8580">OTH-002</text>
+</svg>

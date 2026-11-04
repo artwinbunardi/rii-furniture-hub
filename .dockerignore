@@ -1,0 +1,9 @@
+node_modules
+.next
+.env
+storage/uploads/*
+storage/test-uploads
+test-results
+playwright-report
+*.tsbuildinfo
+.git

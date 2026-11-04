@@ -1,0 +1,46 @@
+# Local / single-server deployment: PostgreSQL + one-off migration job + the app.
+#   cp .env.example .env    # then set SESSION_SECRET (openssl rand -hex 32)
+#   docker compose up -d db
+#   docker compose run --rm migrate              # migrations + DEMO data (npm run db:seed)
+#   #   …or for a real installation without demo data:
+#   # docker compose run --rm -e ADMIN_EMAIL=… -e ADMIN_NAME=… -e ADMIN_PASSWORD=… migrate npm run db:bootstrap
+#   docker compose up -d app                     # → http://localhost:3000
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: rii
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-rii}
+      POSTGRES_DB: rii
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rii -d rii"]
+      interval: 5s
+      retries: 20
+
+  migrate:
+    build: { context: ., target: builder }
+    depends_on: { db: { condition: service_healthy } }
+    environment:
+      DATABASE_ADMIN_URL: postgres://rii:${POSTGRES_PASSWORD:-rii}@db:5432/rii
+      DATABASE_URL: postgres://rii_app:${RII_APP_PASSWORD:-rii_app}@db:5432/rii
+      UPLOAD_DIR: /data/uploads
+    volumes: [uploads:/data/uploads]
+    command: sh -c "npm run db:migrate && npm run db:seed"
+    profiles: [tools]
+
+  app:
+    build: { context: ., target: runner }
+    depends_on: { db: { condition: service_healthy } }
+    ports: ["3000:3000"]
+    environment:
+      DATABASE_URL: postgres://rii_app:${RII_APP_PASSWORD:-rii_app}@db:5432/rii
+      APP_URL: ${APP_URL:-http://localhost:3000}
+      SESSION_SECRET: ${SESSION_SECRET:?set SESSION_SECRET in .env (openssl rand -hex 32)}
+      SHOW_DEMO_ACCOUNTS: ${SHOW_DEMO_ACCOUNTS:-true}
+    volumes: [uploads:/data/uploads]
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  uploads:
