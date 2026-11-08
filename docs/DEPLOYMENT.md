@@ -86,3 +86,14 @@ are checked for scripts and served with a sandboxing CSP; all files are served w
 - [ ] Daily PostgreSQL backups + `UPLOAD_DIR` backups
 - [ ] Run `npm run db:migrate` (owner URL) on each release before starting the new version
 - [ ] Timezone: the app computes dates in Asia/Jakarta itself; server TZ does not matter
+
+## Railway (one click from GitHub)
+
+`railway.json` makes Railway build `Dockerfile.cloud`, whose start script (`scripts/cloud-start.ts`) runs migrations,
+rotates the `rii_app` password, loads DEMO data when the database is empty (`SEED_DEMO=false` to skip; then use
+`npm run db:bootstrap`), and starts Next.js as the non-owner `rii_app` role.
+
+1. New Project → Deploy from GitHub repo → this repo.  2. Add → Database → PostgreSQL.
+3. App service → Variables: `DATABASE_URL=${{Postgres.DATABASE_URL}}`, `SESSION_SECRET=<openssl rand -hex 32>`,
+   `SHOW_DEMO_ACCOUNTS=true` (demo only).  4. Settings → Networking → Generate Domain.
+5. Optional: add a Volume mounted at `/data/uploads` so uploaded media survives redeploys.
